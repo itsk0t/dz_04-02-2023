@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>
+        <span> {{imprisoned_post.last_name}}</span>
+        <span>{{imprisoned_post.name}}</span>
+        <span>{imprisoned_post.patronymic}}</span>
+    </p>
+    <p>Статья: {{imprisoned_post.article}}</p>
+    <p>Срок: {{imprisoned_post.period}}</p>
+    <p>Блок - {{ imprisoned_post.block }} камера - {{ imprisoned_post.cell }}</p>
+    <p>Применание о поведении {{ imprisoned_post.block.note_about_behavior }}</p>
+</body>
+</html>

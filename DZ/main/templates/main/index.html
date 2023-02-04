@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список заключенных</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <header>
+        <div class="menubar_general">
+            <nav>
+                <a href="#">Главная</a>
+                <a href="#">Список заключенных</a>
+                <a href="#">Инфориация</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Список заключенных:</h1>
+        {% for el in imprisoned %}
+            <div>
+                <a href="#"><span> {{el.last_name}}</span> <span>{{el.name}}</span> <span>{{el.patronymic}}</span></a>
+                <p>Статья: {{el.article}}</p>
+                <p>Срок: {{el.period}}</p>
+            </div>
+        {% endfor %}
+    </main>
+</body>
+</html>
