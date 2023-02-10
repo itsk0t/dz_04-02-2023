@@ -8,11 +8,15 @@
     <p>
         <span> {{imprisoned_post.last_name}}</span>
         <span>{{imprisoned_post.name}}</span>
-        <span>{imprisoned_post.patronymic}}</span>
+        <span>{{imprisoned_post.patronymic}}</span>
     </p>
     <p>Статья: {{imprisoned_post.article}}</p>
     <p>Срок: {{imprisoned_post.period}}</p>
     <p>Блок - {{ imprisoned_post.block }} камера - {{ imprisoned_post.cell }}</p>
-    <p>Применание о поведении {{ imprisoned_post.block.note_about_behavior }}</p>
+    {% if imprisoned_post.note_about_behavior %}
+        <p>Применание о поведении {{ imprisoned_post.note_about_behavior }}</p>
+    {% endif %}
+
+
 </body>
 </html>

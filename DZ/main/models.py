@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Imprisoned(models.Model):
-    # photo = models.ImageField
+    #photo = models.ImageField()
     name = models.CharField('Имя', max_length=30)
     last_name = models.CharField('Фамилия', max_length=30)
     patronymic = models.CharField('Отчество', max_length=30)

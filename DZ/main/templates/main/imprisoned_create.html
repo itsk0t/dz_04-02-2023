@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Форма добавления</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}
+
+        <input type="text" placeholder="Фамилия"><br>
+        <input type="text" placeholder="Имя"><br>
+        <input type="text" placeholder="Отчество"><br>
+        <input type="text" placeholder="Статья"><br>
+        <input type="date" placeholder="Начало срока"><br>
+        <input type="text" placeholder="Срок"><br>
+        <input type="text" placeholder="Номер блока"><br>
+        <input type="text" placeholder="Номер камеры"><br>
+        <textarea type="text" placeholder="Примечание о поведении"></textarea><br>
+        <button type="submit">Добавить</button><br>
+    </form>
+</body>
+</html>

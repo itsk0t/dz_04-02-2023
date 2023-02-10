@@ -8,25 +8,19 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
 <body>
-    <header>
-        <div class="menubar_general">
-            <nav>
-                <a href="#">Главная</a>
-                <a href="#">Список заключенных</a>
-                <a href="#">Инфориация</a>
-                <a href="#">Контакты</a>
-            </nav>
-        </div>
-    </header>
     <main>
         <h1>Список заключенных:</h1>
         {% for el in imprisoned %}
             <div>
-                <a href="#"><span> {{el.last_name}}</span> <span>{{el.name}}</span> <span>{{el.patronymic}}</span></a>
+                <a href="{% url 'imprisoned_detail' el.id %}"><span> {{el.last_name}}</span> <span>{{el.name}}</span> <span>{{el.patronymic}}</span></a>
                 <p>Статья: {{el.article}}</p>
                 <p>Срок: {{el.period}}</p>
             </div>
         {% endfor %}
     </main>
+
+    <div>
+        <a href=" {% url 'create' %} "><button>Добавить заключенного</button></a>
+    </div>
 </body>
 </html>
